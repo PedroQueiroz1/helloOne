@@ -13,11 +13,22 @@
 		pulaLinha();
 	}
 
-	var vitorias = parseInt(prompt("Entre com o número de vitórias"));
-	var empates = parseInt(prompt("Entre com o número de empates"));
+	var vitorias = parseInt(prompt("Entre com o número de vitórias desse ano"));
+	var empates = parseInt(prompt("Entre com o número de empates desse ano"));
+	var vitoriasAnoPassado = parseInt(prompt("Entre com o número de vitórias do ano passado"));
+	var empatesAnoPassado = parseInt(prompt("Entre com o número de empates do ano passado"));
+
 
 	var pontos = (vitorias * 3 + empates);
-
+	var pontosAnoPassado = (vitoriasAnoPassado * 3 + empatesAnoPassado);
+	
 	mostra("Os pontos do seu time é: " + pontos);	
+
+	if(pontos>pontosAnoPassado){
+	mostra("Seu time está melhor do que o ano passado");
+	}else if(pontos<pontosAnoPassado){
+	mostra("Seu time está pior do que o ano passado");
+	}else
+	mostra("Seu time está igual do que o ano passado");
 
 </script>
