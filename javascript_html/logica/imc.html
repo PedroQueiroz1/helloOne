@@ -24,4 +24,11 @@
     mostra("O imc de " + nome +" é: " + Math.round(imcPessoa));
     //mostra("A soma dos imc's é: "+ (Math.round(imcPessoa1) + Math.round(imcPessoa2)));
 
+    if(imcPessoa<18.5){
+    	mostra("Você está abaixo do recomendado");
+    }else if(imcPessoa>35){
+    mostra("Seu imc está acima do recomendado");
+    }else
+    mostra("Seu imc está bom");
+
 </script>
