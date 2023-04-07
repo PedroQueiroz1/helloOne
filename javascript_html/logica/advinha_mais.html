@@ -8,34 +8,30 @@
 	//crie uma function que sorteie um numero aleatorio diferente de zero e que nao se repita.
 
 	function sorteia(){
-		var num = Math.round(Math.random()*10);
-		return num;
+		return Math.round(Math.random()*10);
 	}
 
 	function sorteiaNumeros(qtd){
-		var segredos = [];
-
 		var numero = 1;
-		
+		var segredos = [];
 		while(numero<=qtd){
-
 			var numeroAleatorio = sorteia();
 			var achou = false;
-
-			if(numeroAleatorio !== 0){
-				for(var i = 0; i< segredos.length; i++){
-					if(segredos[posicao]==numeroAleatorio){
+			if(numeroAleatorio!==0){
+				for(i=0;i<segredos.length;i++){
+					if(numeroAleatorio==segredos[i]){
 						achou = true;
 						break;
 					}
 				}
-				if (achou == false) {
-					segredos.push(numeroAleatorio);
-					numero ++;
-				}
+			}
+			if(achou=false){
+				segredos.push(numeroAleatorio);
+				numero++;
 			}
 		}
 	}
+}
 
 
 	var segredos = sorteiaNumeros(4);
